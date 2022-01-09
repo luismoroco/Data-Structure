@@ -1,12 +1,16 @@
 #include<iostream>
+
 #include<fstream>
+
 using namespace std;
+
 template<class T>class Node{ 
 public:
 	T data;
 	string label;
 	Node<T> *next;
 };
+
 template<class T>class priority_queue{
 private:
 	Node<T> * root;
@@ -75,7 +79,9 @@ public:
 		filewriter.close();
 	} 
 };
-int main(){	
+
+int main()
+{	
 	priority_queue<int> p;
 	ifstream filereader("procesos.txt");
 	if(filereader.is_open()){
